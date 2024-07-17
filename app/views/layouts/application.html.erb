@@ -17,6 +17,72 @@
   <body>
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 
+<nav class="navbar bg-body-tertiary fixed-top">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/">Sofea's Portfolio</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasNavbarLabel"></h5>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body">
+        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+          <li class="nav-item">
+          <%= link_to 'Home', root_path, class: "nav-link #{active_class(root_path)}" %>
+          </li>
+          <li class="nav-item">
+            <%= link_to 'View my Work', portfolio_path, class: "nav-link #{active_class(portfolio_path)}" %>
+          </li>
+          <li class="nav-item">
+            <%= link_to 'About', about_path, class: "nav-link #{active_class(about_path)}" %>
+          </li>          
+          <li class="nav-item">
+            <%= link_to 'Contact', contact_path, class: "nav-link #{active_class(contact_path)}" %>
+          </li> 
+        </ul> 
+      </div>
+    </div>
+  </div>
+</nav>
+
     <%= yield %>
+
+  <footer class="footer bg-secondary"> 
+		<div class="container"> 
+			<div class="row"> 				
+				<div class="col-md-8"> 
+					<h5>Contact</h5> 
+					<ul class="list-unstyled"> 
+						<li>Email: ainsofeashahruddin@gmail.com</li> 						
+						<li>Address: Cyberjaya, Selangor, Malaysia</li> 
+					</ul> 
+				</div> 
+				<div class="col-md-3"> 
+					<h5>Social</h5> 
+					<ul class="list-inline footer-links"> 
+						<li class="list-inline-item"> 
+							<a href="https://github.com/ainsofea" target="_blank"> 
+								<i class="fab fa-github"></i> 
+							</a> 
+						</li> 						
+						<li class="list-inline-item"> 
+							<a href="https://www.linkedin.com/in/ainsofea/" target="_blank"> 
+								<i class="fab fa-linkedin"></i> 
+							</a> 
+						</li> 
+					</ul> 
+				</div> 
+			</div> 
+			<hr> 
+			<div class="row"> 
+				<div class="col-md-6"> 
+					<p>© 2024 Sofea's Portfolio. All rights reserved.</p> 
+				</div> 				
+			</div> 
+		</div> 
+	</footer> 
   </body>
 </html>
